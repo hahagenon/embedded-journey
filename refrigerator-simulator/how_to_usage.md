@@ -13,12 +13,16 @@ pip install matplotlib
 python step1_basic.py
 ```
 - 기본 창과 고정된 온도 표시
+  
+![alt text](image/image_step1.png)
 
 #### 2단계: 실시간 온도 변화
 ```bash
 python step2_temperature.py
 ```
 - 온도가 실시간으로 변함 (자연 상승)
+
+![alt text](image/image_step2.png)
 
 #### 3단계: 자동 제어
 ```bash

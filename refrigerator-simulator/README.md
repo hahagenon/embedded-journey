@@ -120,7 +120,7 @@ refrigerator-simulator/
 ---
 
 ### ✨ 주요 기능 
-[→ 자세히 보기](.\main_feature.md)
+[→ 자세히 보기](./main_feature.md)
 
 ### 🚀 실행 방법
-[→ 자세히 보기](.\how_to_usage.md)
+[→ 자세히 보기](./how_to_usage.md)
