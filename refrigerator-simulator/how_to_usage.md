@@ -30,51 +30,34 @@ python step3_control.py
 ```
 - 슬라이더로 목표 온도 설정
 - 압축기 자동 제어
+- 
+![alt text](image/image_step3.png)
 
 #### 4단계: 실시간 그래프
 ```bash
-python step4_graph.py
+python step4_damper.py
 ```
-- 온도 변화를 그래프로 시각화
+- 온도 변화를 그래프로 시각화 및 냉장 냉동 댐퍼 연결
+  
+![alt text](image/image_step4.png)
+![alt text](image/image_step4_1.png)
 
-#### 5단계: 완전체
+#### 5단계: 장치 오류 시뮬레이터 추가
 ```bash
-python step5_complete.py
+python step5_failure.py
 ```
 - 장애 시뮬레이션 + 로그 시스템
 
+![alt text](image/image_step5_1.png)
+![alt text](image/image_step4_1.png)
+![alt text](image/image_step5_2.png)
+
+#### 6단계: 최종 정리 로그 추가
+```bash
+python step6_complete.py
+```
+![alt text](image/image_step5_1.png)
+![alt text](image/image_step4_1.png)
+![alt text](image/image_step6_1.png)
+
 ---
-
-## 🧠 핵심 개념
-
-### 1. Hysteresis 제어
-```python
-# 떨림 방지를 위한 ±2도 범위
-if temp > target + 2:
-    compressor_on = True   # ON
-elif temp < target - 2:
-    compressor_on = False  # OFF
-# target-2 ~ target+2 사이에서는 상태 유지
-```
-
-### 2. 물리 시뮬레이션
-```python
-# 외부 열 유입 (자연 상승)
-fridge_temp += 0.02
-
-# 압축기 작동 (냉각)
-if compressor_on:
-    freezer_temp -= 0.15
-    fridge_temp -= 0.03
-
-# 센서 노이즈
-temp += random.gauss(0, 0.05)
-```
-
-### 3. 긴급 정지 로직
-```python
-# 센서 고장 시 즉시 정지
-if not sensor_ok:
-    compressor_on = False
-    damper_open = False
-```

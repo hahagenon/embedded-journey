@@ -58,8 +58,9 @@ refrigerator-simulator/
 └── simulator_code/            # simulator 소스 코드
     ├── Step1_basic.py             # 1단계: 기본 GUI
     ├── Step2_temperature.py       # 2단계: 실시간 온도
-    ├── Step3_control.py           # 3단계: 자동 제어
-    ├── Step4_graph.py             # 4단계: 그래프
+    ├── Step3_control.py           # 3단계: 압축기 자동 제어
+    ├── step4_damper.py            # 4단계: 그래프 및 뎀퍼
+    ├── step5_failure.py           # 4단계: 센서 고장 및 로그
     └── Step5_complete.py          # 5단계: 완전체
 
 ```
